@@ -13,7 +13,7 @@ inputs:
     
 runs:
   using: 'docker'
-  image: "docker://zedrazer/terraform-plan-summariser-action:1.0.0"
+  image: "docker://zedrazer/terraform-plan-summariser-action:1.0.1"
   args:
     - ${{ inputs.TF_PLAN_DIR }}
     - ${{ inputs.TF_PLAN_FILE }}
