@@ -1,4 +1,4 @@
-# github-action-terraform-plan-summary
+# terraform-plan-summariser-action
 
 GitHub Action that takes a json based terraform plan output file as an input, and outputs a markdown based summary of the plan to the GitHub Actions Job Summary window
 
