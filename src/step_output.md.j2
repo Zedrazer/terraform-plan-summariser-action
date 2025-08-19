@@ -1,0 +1,35 @@
+#### Terraform Plan Summary
+
+{% if show_tables == true %}
+
+Key:
+
+|                       | Action |
+| -----------           | -------------- |
+| :white_check_mark:    | Create |
+| :interrobang:         | Replace |
+| :wrench:              | Update |
+| :x:                   | Delete |
+
+{% endif %}
+
+
+{{ result }}
+
+
+{% if show_tables == true %}
+|             | Resource |
+| ----------- | -------------- |
+{% for item in creates -%}
+{{ item }}
+{% endfor -%}
+{% for item in replaces -%}
+{{ item }}
+{% endfor -%}
+{% for item in updates -%}
+{{ item }}
+{% endfor -%}
+{% for item in deletes -%}
+{{ item }}
+{% endfor -%}
+{% endif %}

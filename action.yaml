@@ -1,0 +1,19 @@
+name: 'Custom GitHub Action to Summarise Terraform Plan'
+description: 'A GitHub Action that takes a json based terraform plan as an input and outputs a summary to the GitHub Action Step Summary window'
+inputs:
+  TF_PLAN_DIR:
+    description: 'Directory where output json plan is'
+    required: true
+  TF_PLAN_FILE:
+    description: 'Name of the json terraform plan file'
+    required: true
+  REPOSITORY:
+    description: 'Repository name to be displayed on the drift alert'
+    required: false
+    
+runs:
+  using: 'docker'
+  image: "docker://zedrazer/terraform-plan-summariser-action:1.0.0"
+  args:
+    - ${{ inputs.TF_PLAN_DIR }}
+    - ${{ inputs.TF_PLAN_FILE }}
