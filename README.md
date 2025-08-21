@@ -2,8 +2,6 @@
 
 GitHub Action that takes a json based terraform plan output file as an input, and outputs a markdown based summary of the plan to the GitHub Actions Job Summary window
 
-The Action is also capable of sending an alert to an MS Teams channel if required (see notes below)
-
 ## Usage
 
 A json based terraform plan output file must first be output from a terraform plan command, as well as the directory in which the plan file has been produced in the checked out repository. A simple example of usage can be defined as follows:
